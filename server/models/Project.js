@@ -1,6 +1,5 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-//new mongoose schema (separate to GraphQL schema)
 const ProjectSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -10,13 +9,12 @@ const ProjectSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["Not Started", "In Progress", "Completed"],
+    enum: ['Not Started', 'In Progress', 'Completed'],
   },
-  client: {
-    //objectId is a type specific to mongoose
+  clientId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Client",
+    ref: 'Client',
   },
 });
 
-module.exports = mongoose.model("Client", ProjectSchema);
+module.exports = mongoose.model('Project', ProjectSchema);

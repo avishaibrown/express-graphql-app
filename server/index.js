@@ -10,6 +10,7 @@ const app = express();
 
 connectDB();
 
+// Set GraphiQL to be the interface when running locally
 app.use(
   "/graphql",
   graphqlHTTP({

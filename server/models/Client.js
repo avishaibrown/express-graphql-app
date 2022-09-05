@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 
-//new mongoose schema (separate to GraphQL schema)
 const ClientSchema = new mongoose.Schema({
   name: {
     type: String,
